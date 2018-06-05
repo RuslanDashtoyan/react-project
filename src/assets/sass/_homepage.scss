@@ -1,0 +1,50 @@
+.user {
+    @include flex($d: flex, $fd: column, $jc: center, $ait: center);
+    @include props($w: 100%, $min-h: calc(100vh), $bg: $bg-gradient);
+    &-welcome {
+        @include props($col: $white, $fz: 20px, $lh: 30px, $tr: $anim);
+    }
+    &-title span,
+    &-pretitle span,
+    &-role span {
+        @include pos($z: 2, $pos: relative);
+        @include props(
+            $text-shadow: (-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black),
+            $col: $white, $fz: 70px, $fw: bold, $m: 0 0 20px, $tt: uppercase, $tr: $anim
+        );
+        &:hover:after {
+            @include matrix();
+        }
+        &:after {
+            @include matrixM();
+            @include pos($l: 0, $pos: absolute);
+            @include props($col: $blue, $tr: $anim);
+        }
+    }
+    &-role {
+        @include margin($mt: 40px);
+        @include border($bd-t: 5px solid #e2e1e1);
+        span {
+            @include props($dis: inline-block, $p: 5px 0 0, $fz: 40px);
+        }
+        span:nth-child(6) {
+            @include margin($m: 0 5px);
+            &:after {
+                content: '-';
+            }
+        }
+        span:nth-child(10) {
+            @include margin($m: 0 5px);
+        }
+        span:nth-child(13) {
+            @include margin($mr: 10px);
+        }
+    }
+}
+
+$letters: a b c d e f g h i j k l m n o p q r s t u v w x y z ;
+@each $letter in $letters {
+    span.#{$letter}:after {
+        content: '#{$letter}';
+    }
+}

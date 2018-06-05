@@ -1,0 +1,103 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model;
+       -moz-box-sizing: $box-model;
+            box-sizing: $box-model;
+}
+
+@mixin props($col: inherit, $fz: inherit, $bg: null, $td: none, $tt: null, $bd: none, $w: null, $h: null, $m: null, $p: null, $min-h: null, 
+             $tr: null, $lh: null, $fw: null, $text-shadow: null, $dis: null, $bgc: null) {
+    color: $col;
+    font-size: $fz;
+    background: $bg;
+    text-decoration: $td;
+    text-transform: $tt;
+    border: $bd;
+    width: $w;
+    height: $h;
+    margin: $m;
+    padding: $p;
+    min-height: $min-h;
+    transition: $tr;
+    line-height: $lh;
+    font-weight: $fw;
+    text-shadow: $text-shadow;
+    display: $dis;
+    background-color: $bgc;
+}
+
+@mixin bg-i($bgi: null, $bgs: null, $bgp: null, $bgr: null){
+    background-image: $bgi;
+    background-size: $bgs;
+    background-position: $bgp;
+    background-repeat: $bgr;
+}
+
+@mixin pos($content: '', $pos: null, $t: null, $r: null, $b: null, $l: null, $z: null){
+    position: $pos;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+    z-index: $z;
+}
+
+@mixin mask-create($img: null, $size: null, $anim: null){
+    -webkit-mask-image: $img;
+    -webkit-mask-size: $size;
+    animation: $anim;
+}
+
+@mixin flex($d: null, $fd: null, $aic: null, $ait: null, $jc: null, $ais: null, $fg: null){
+    display: $d;
+    flex-direction: $fd;
+    align-content: $aic;
+    align-items: $ait;
+    justify-content: $jc;
+    align-self: $ais;
+    flex-grow: $fg;
+}
+
+@mixin matrix(){
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+@mixin matrixM (){
+    transform: matrix(1, -0.2, 0, 1, 0, -5);
+    -ms-transform: matrix(1, -0.2, 0, 1, 0, -5);
+    -webkit-transform: matrix(1, -0.2, 0, 1, 0, -5);
+}
+@mixin border($bd: null, $bd-t: null, $bd-r: null, $bd-b: b, $bd-l: null){
+    border: $bd;
+    border-top: $bd-t;
+    border-bottom: $bd-b;
+    border-left: $bd-l;
+    border-right: $bd-r;
+}
+
+@mixin margin($m: null, $mt: null, $mr: null, $mb: null, $ml: null){
+    margin: $m;
+    margin-top: $mt;
+    margin-right: $mr;
+    margin-bottom: $mb;
+    margin-left: $ml;
+}
+
+@mixin lol($class, $color, $inner, $bg, $w, $h){
+    #{$class} {
+        color: $color;
+        #{$inner} {
+            background-color: $bg;
+            width: $w;
+            height: $h;
+        }
+    }
+}

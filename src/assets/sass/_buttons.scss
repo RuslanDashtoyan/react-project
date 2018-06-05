@@ -1,0 +1,11 @@
+.navbar-toggle {
+    @include props($bd: none);
+    &:hover,
+    &:focus {
+        @include props($bgc: transparent !important);
+    }
+}
+
+.navbar-collapse {
+    @include props($tr: $anim);
+}

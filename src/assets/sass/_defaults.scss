@@ -1,0 +1,15 @@
+* {
+    @include box-sizing(border-box)
+}
+
+body ul, h1, h2, h3, h4, h5, h6 {
+    @include props($m: 0, $p: 0);
+}
+
+img {
+    max-width: 100%;
+}
+
+textarea {
+    resize: none;
+}

@@ -1,0 +1,21 @@
+.imgCont {
+    width: 100%;
+    position: relative;
+    height: calc(100vh - 50px);
+    background-image: url('../img/wall.jpg');
+    background-position: center center;
+    background-size: cover;
+    // filter: blur(2px);
+    &-circle {
+        position: relative;
+        top: 20%;
+        left: 40%;
+        width: 150px;
+        height: 150px;
+        z-index: 1;
+        border-radius: 50%;
+        // background-color: transparent;
+        border: 5px solid #000;
+        // filter: blur(10px);
+    }
+}

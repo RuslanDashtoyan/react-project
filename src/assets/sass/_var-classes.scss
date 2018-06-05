@@ -1,0 +1,29 @@
+/********* VARIABLE **********/
+
+$grey: grey;
+$white: #fff;
+$blue: #39a8cb;
+$trans: transparent;
+
+$bg-gradient: -webkit-linear-gradient(45deg, rgba(13,36,38,1) 0%,rgba(33,33,61,1) 100%);
+$mask-gradient: linear-gradient(-75deg, rgba(150,0,1,.6) 30%, #000 50%, rgba(150,0,1,.6) 70%);
+
+$anim: all 300ms ease-in-out;
+
+/********* CLASSES **********/
+
+.p0 {
+    padding: 0 !important;
+}
+
+.m0 {
+    margin: 0 !important;
+}
+
+.close {
+    display: none;
+}
+
+.active-link {
+   color: $blue;
+}

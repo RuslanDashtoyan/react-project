@@ -1,0 +1,19 @@
+#my-navbar {
+    @include border-radius(0);
+    @include props($bg: $bg-gradient, $w: 100%, $bd: none);
+    @include pos($pos: fixed, $l: 0, $t: 0, $z: 10);
+    .navbar {
+        min-height: auto;
+        &-toggle {
+            @include props($m: 0);
+        }
+        &-nav {
+            a {
+                @include props($white, 16px);
+                &:hover {
+                    @include mask-create($mask-gradient, 200%,  shine 2s infinite);
+                }
+            }
+        }
+    }
+}
